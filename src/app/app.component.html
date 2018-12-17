@@ -1,0 +1,50 @@
+<div class = "main">
+  <h1>To Do List</h1>
+  <div class="addItem">
+    <input [(ngModel)] = "newItem" (keydown.enter) = "pushItem()" placeholder="What To Do?" class="addText">
+    <button (click) = "pushItem()">+</button>
+  </div>
+  <ul>
+    <li *ngFor = "let i of items; let ind = index">
+      {{i}}
+      <span><button (click) = "removeItem(ind)"><strong>X</strong></button></span>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------->
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<!-- <a routerLink="/member">Member</a><br>
+<a routerLink="/product">Product</a>
+<router-outlet></router-outlet>
+<ul>
+  <li *ngFor = "let i of arr">{{i}}</li>
+</ul>
+<p *ngIf = "isTrue; then HappyNewYear else BackToWork ">Merry Christmas</p>
+<!-- <p *ngIf = "myName=='Kimmy'">Happy New Year</p> -->
+<!-- <ng-template #HappyNewYear>Happy New Year</ng-template>
+<ng-template #BackToWork>Back To Work</ng-template>  -->
